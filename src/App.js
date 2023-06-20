@@ -13,7 +13,7 @@ import Alert from './components/Alert';
 
 function App() {
 
-  const [mode,setMode] = useState({bsColor:'light',color:'white'}) 
+  const [mode,setMode] = useState({bsColor:'light',color:'black'}) 
   const [alert, setAlert] = useState(null);
   const toggleMode = (message,data) => {
     
