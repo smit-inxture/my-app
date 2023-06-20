@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 function App() {
 
@@ -32,14 +32,15 @@ function App() {
 
   return (
   <>
-  <Router>
+  {/* <Router> */}
     <Navbar mode={mode} title='TextUtils' toggleMode = {toggleMode}  />
     <Alert alert={alert}/>
-    <Routes>
+    <TextForm heading="Enter the text to analyze below" text="About" mode={mode} showAlert={showAlert} toggleMode={toggleMode} />
+    {/* <Routes>
     <Route path="/about" element={<About />} />
     <Route path="/" element={<TextForm heading="Enter the text to analyze below" mode={mode} showAlert={showAlert} ttoggleMode={toggleMode} />} />
     </Routes>
-  </Router>
+  </Router> */}
   </>
   );
 }

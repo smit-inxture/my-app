@@ -1,17 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 
 export default function Navbar(props) {
-  console.log(props.mode,'-----------',props.mode.bsColor)
 
   const runner = (message,data) => {
     props.toggleMode(message,data)
   }
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode?props.mode:'light'}`}>
-    <Link className="navbar-brand" to="/">{props.title}</Link>
+    <a className="navbar-brand" href="/">{props.title}</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -19,24 +18,24 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+          <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/about">About</Link>
+          <a className="nav-link" href="/about">About</a>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle" to="/" role="button" data-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle" href="/" role="button" data-toggle="dropdown" aria-expanded="false">
             Dropdown
-          </Link>
+          </a>
           <div className="dropdown-menu">
-            <Link className="dropdown-item" to="/">Action</Link>
-            <Link className="dropdown-item" to="/">Another action</Link>
+            <a className="dropdown-item" href="/">Action</a>
+            <a className="dropdown-item" href="/">Another action</a>
             <div className="dropdown-divider"></div>
-            <Link className="dropdown-item" to="/">Something else here</Link>
+            <a className="dropdown-item" href="/">Something else here</a>
           </div>
         </li>
         <li className="nav-item">
-          <Link className="nav-link disabled" to='/'>Disabled</Link>
+          <a className="nav-link disabled" href='/'>Disabled</a>
         </li>
       </ul>
       <div className="btn-group" role="group" aria-label="Basic mixed styles example">
